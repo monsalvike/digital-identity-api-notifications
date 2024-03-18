@@ -19,7 +19,7 @@ jobs:
         export_default_credentials: true
     - name: Authenticate with Artifact Registry
       run: |
-          gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
+          gcloud auth configure-docker "northamerica-northeast1-docker.pkg.dev" --quiet
       env:
           REGION: us-central1
     - name: Make gradlew executable
