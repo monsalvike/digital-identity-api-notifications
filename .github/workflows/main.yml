@@ -22,6 +22,8 @@ jobs:
           gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
       env:
           REGION: us-central1
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
     - name: Executing gradle clean
       run: ./gradlew clean
 
